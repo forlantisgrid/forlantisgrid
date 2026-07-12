@@ -1,25 +1,29 @@
 import './About.css'
+import iconFactory from '../assets/icons/icon-factory.png'
+import iconGlobe from '../assets/icons/icon-globe.png'
+import iconShield from '../assets/icons/icon-shield.png'
+import iconGear from '../assets/icons/icon-gear.png'
 
 const PILLARS = [
   {
     title: 'Power Equipment',
     desc: 'Transformers, breakers, and substation equipment to IEEE, ANSI, and IEC standards — sourced from one of the world\'s most experienced high-voltage manufacturers.',
-    icon: '/assets/icons/icon-factory.png',
+    icon: iconFactory,
   },
   {
     title: 'Global Manufacturing Access',
     desc: 'Bridging qualified manufacturers with execution-focused local support. We bring world-class production capability to North American project timelines.',
-    icon: '/assets/icons/icon-globe.png',
+    icon: iconGlobe,
   },
   {
     title: 'Risk-Aware Delivery',
     desc: 'Reducing technical, manufacturing, schedule, and quality risks at every stage — from specification through commissioning and beyond.',
-    icon: '/assets/icons/icon-shield.png',
+    icon: iconShield,
   },
   {
     title: 'Project Services',
     desc: 'Engineering, quality oversight, factory acceptance testing, commissioning, and long-term maintenance support for every product we supply.',
-    icon: '/assets/icons/icon-gear.png',
+    icon: iconGear,
   },
 ]
 

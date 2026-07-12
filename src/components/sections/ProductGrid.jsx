@@ -1,4 +1,4 @@
-import Card from '../ui/Card'
+import { Link } from 'react-router-dom'
 import './ProductGrid.css'
 
 export default function ProductGrid({ products, title = 'Products' }) {
@@ -9,19 +9,27 @@ export default function ProductGrid({ products, title = 'Products' }) {
         <h2 className="section-title">{title}</h2>
         <div className="product-grid">
           {products.map((product) => (
-            <Card key={product.id}>
+            <div key={product.slug || product.name} className="pg-card">
               {product.image && (
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="card-product-img"
+                  className="pg-card-img"
                 />
               )}
-              <div className="card-body">
-                <h3 className="card-product-name">{product.name}</h3>
-                <p className="card-product-desc">{product.description}</p>
+              <div className="pg-card-body">
+                {product.badge && (
+                  <span className="pg-card-badge">{product.badge}</span>
+                )}
+                <h3 className="pg-card-name">{product.name}</h3>
+                <p className="pg-card-desc">{product.description}</p>
+                {product.slug && (
+                  <Link to={`/products/${product.slug}`} className="pg-card-link">
+                    View Specs →
+                  </Link>
+                )}
               </div>
-            </Card>
+            </div>
           ))}
         </div>
       </div>

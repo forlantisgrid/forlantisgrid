@@ -54,7 +54,6 @@ export default function Contact() {
           'Company': form.company,
           'Equipment type': form.equipment,
           'Project details': form.details,
-          'Include project services': form.services ? 'Yes' : 'No',
         }),
       })
       if (res.ok) {
@@ -124,7 +123,7 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="form-field form-field-full">
-                  <label htmlFor="details">Project details</label>s
+                  <label htmlFor="details">Project details</label>
                   <textarea id="details" rows="4" placeholder="Ratings, quantities, site location, target delivery" value={form.details} onChange={handleChange} required />
                 </div>
                 {/* <label className="checkbox-label">

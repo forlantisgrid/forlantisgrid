@@ -9,27 +9,66 @@
   gap: var(--space-6);
 }
 
-.card-product-img {
-  width: calc(100% + var(--space-6) * 2);
-  margin: calc(var(--space-6) * -1) calc(var(--space-6) * -1) var(--space-5);
+/* Card — image bleeds to all edges via overflow:hidden */
+.pg-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow var(--duration-base) var(--ease-standard),
+              transform var(--duration-base) var(--ease-standard);
+}
+
+.pg-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.pg-card-img {
+  width: 100%;
   height: 180px;
   object-fit: cover;
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   display: block;
+  flex-shrink: 0;
 }
 
-.card-body {
-  padding: 0;
+.pg-card-body {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
 }
 
-.card-product-name {
+.pg-card-badge {
+  font: var(--text-mono-sm);
+  color: var(--fg-accent);
+}
+
+.pg-card-name {
   font: var(--text-h4);
   color: var(--fg-primary);
-  margin-bottom: var(--space-2);
+  margin: 0;
 }
 
-.card-product-desc {
+.pg-card-desc {
   font: var(--text-body-sm);
   color: var(--fg-secondary);
   margin: 0;
+  flex: 1;
+}
+
+.pg-card-link {
+  font: var(--text-body-sm);
+  font-weight: 600;
+  color: var(--navy-700);
+  margin-top: var(--space-2);
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.pg-card-link:hover {
+  color: var(--gold-600);
 }
