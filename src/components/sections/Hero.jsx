@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       className="hero"
-      style={{ backgroundImage: `url("${import.meta.env.BASE_URL}substation-dusk-wide.png")` }}
+      style={{ backgroundImage: `url(/substation-dusk-wide.png)` }}
     >
       <div className="hero-overlay" />
       <div className="container hero-content">
