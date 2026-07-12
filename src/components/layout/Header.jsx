@@ -13,8 +13,15 @@ export default function Header() {
       <div className="container header-content">
         <div className="wordmark">
           <Link to="/" className="wordmark-link" onClick={close}>
-            <span className="wordmark-name">FORLANTIS</span>
-            <span className="wordmark-sub">POWER SOLUTIONS</span>
+            <img
+              src="/images/photos/forlantis-icon-light.svg"
+              alt=""
+              className="header-icon"
+            />
+            <span className="wordmark-text">
+              <span className="wordmark-name">FORLANTIS</span>
+              <span className="wordmark-sub">POWER SOLUTIONS</span>
+            </span>
           </Link>
         </div>
 

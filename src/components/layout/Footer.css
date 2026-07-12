@@ -14,8 +14,10 @@
 }
 
 .footer-logo {
+  height: 160px;
+  width: auto;
+  display: block;
   margin-bottom: var(--space-4);
-  /* SVG has transparent background — no extra styling needed */
 }
 
 .footer-section h5 {
