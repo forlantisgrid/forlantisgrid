@@ -1,0 +1,142 @@
+/* Forlantis Power Solutions — Design System Tokens */
+
+/* Webfonts */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Expanded:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ---- Navy Scale ---- */
+  --navy-950: #060f1c;
+  --navy-900: #0a1728;
+  --navy-800: #0e2038;
+  --navy-700: #142c49;
+  --navy-600: #1c3c5e;
+  --navy-500: #2a5279;
+  --navy-400: #4d7398;
+  --navy-300: #86a4bf;
+  --navy-200: #c2d3e2;
+  --navy-100: #e4ebf1;
+  --navy-50:  #f4f7fa;
+
+  /* ---- Gold Scale ---- */
+  --gold-700: #9c6a1e;
+  --gold-600: #b9852b;
+  --gold-500: #d9a441;
+  --gold-400: #e8bd63;
+  --gold-300: #f0d295;
+  --gold-100: #fbf1de;
+
+  /* ---- Neutrals ---- */
+  --white: #ffffff;
+  --black: #05090f;
+  --gray-900: #14181d;
+  --gray-700: #3d444c;
+  --gray-500: #6b7480;
+  --gray-300: #aeb6bf;
+  --gray-200: #d7dce1;
+  --gray-100: #eceff2;
+  --gray-50:  #f6f8f9;
+
+  /* ---- Semantic Colors ---- */
+  --bg-page: var(--gray-50);
+  --bg-surface: var(--white);
+  --bg-sunken: var(--gray-100);
+  --bg-inverse: var(--navy-900);
+  --bg-inverse-soft: var(--navy-800);
+
+  --fg-primary: var(--navy-900);
+  --fg-secondary: var(--gray-700);
+  --fg-tertiary: var(--gray-500);
+  --fg-inverse: var(--white);
+  --fg-inverse-secondary: var(--navy-200);
+  --fg-accent: var(--gold-600);
+
+  --border-default: var(--gray-200);
+  --border-strong: var(--gray-300);
+  --border-inverse: rgba(255,255,255,0.14);
+  --border-focus: var(--gold-500);
+
+  --accent-primary: var(--navy-800);
+  --accent-primary-hover: var(--navy-700);
+  --accent-gold: var(--gold-500);
+  --accent-gold-hover: var(--gold-600);
+
+  --surface-card: var(--white);
+  --surface-card-inverse: var(--navy-800);
+  --surface-overlay: rgba(6, 15, 28, 0.72);
+
+  --link-default: var(--navy-700);
+  --link-hover: var(--gold-600);
+  --focus-ring: 0 0 0 3px rgba(217, 164, 65, 0.35);
+
+  /* ---- Typography ---- */
+  --font-display: 'Archivo Expanded', 'Archivo', 'Arial Narrow', sans-serif;
+  --font-heading: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Menlo, monospace;
+
+  --tracking-label: 0.16em;
+  --tracking-display: 0.02em;
+  --tracking-tight: -0.01em;
+
+  --text-display-xl: 700 4.5rem/1.04 var(--font-display);
+  --text-display-lg: 700 3.5rem/1.06 var(--font-display);
+  --text-display-md: 700 2rem/1.12 var(--font-display);
+  --size-display-xl: clamp(2.75rem, 2rem + 2.5vw, 4.5rem);
+  --size-display-lg: clamp(2.25rem, 1.8rem + 1.8vw, 3.5rem);
+
+  --text-h1: 700 2.5rem/1.15 var(--font-heading);
+  --text-h2: 700 1.875rem/1.2 var(--font-heading);
+  --text-h3: 600 1.5rem/1.28 var(--font-heading);
+  --text-h4: 600 1.125rem/1.35 var(--font-heading);
+
+  --text-eyebrow: 700 0.8125rem/1.3 var(--font-heading);
+  --text-body-lg: 400 1.125rem/1.6 var(--font-body);
+  --text-body: 400 1rem/1.6 var(--font-body);
+  --text-body-sm: 400 0.875rem/1.55 var(--font-body);
+  --text-caption: 500 0.75rem/1.4 var(--font-body);
+
+  --text-stat-number: 800 3.25rem/1 var(--font-display);
+  --size-stat-number: clamp(2rem, 1.5rem + 2vw, 3.25rem);
+  --text-stat-label: 600 0.8125rem/1.35 var(--font-heading);
+
+  --text-mono: 500 0.9375rem/1.5 var(--font-mono);
+  --text-mono-sm: 500 0.8125rem/1.5 var(--font-mono);
+
+  /* ---- Spacing ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* ---- Radius ---- */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-xl: 14px;
+  --radius-pill: 999px;
+
+  /* ---- Shadows ---- */
+  --shadow-xs: 0 1px 2px rgba(6, 15, 28, 0.06);
+  --shadow-sm: 0 2px 6px rgba(6, 15, 28, 0.08);
+  --shadow-md: 0 8px 24px rgba(6, 15, 28, 0.10);
+  --shadow-lg: 0 16px 40px rgba(6, 15, 28, 0.16);
+
+  /* ---- Motion ---- */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 360ms;
+
+  /* ---- Layout ---- */
+  --container-max: 1280px;
+  --container-pad: clamp(20px, 5vw, 64px);
+}

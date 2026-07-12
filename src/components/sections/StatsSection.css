@@ -1,0 +1,17 @@
+.stats-section {
+  background-color: var(--bg-inverse);
+  padding: var(--space-16) 0;
+  border-top: 1px solid var(--border-inverse);
+  border-bottom: 1px solid var(--border-inverse);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  divide: solid;
+}
+
+.stats-section .stat-block-label {
+  color: var(--navy-300);
+}

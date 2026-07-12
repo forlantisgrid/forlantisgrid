@@ -1,0 +1,38 @@
+.footer {
+  background-color: var(--navy-950);
+  color: var(--fg-inverse);
+  padding: var(--space-16) 0 var(--space-8);
+  border-top: 1px solid var(--border-inverse);
+  margin-top: auto;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+.footer-wordmark {
+  font: var(--text-eyebrow);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--fg-inverse);
+  margin-bottom: var(--space-3);
+  display: block;
+}
+
+.footer-section h5 {
+  font: var(--text-body-sm);
+  font-weight: 600;
+  color: var(--fg-inverse);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-4);
+}
+
+.footer-section p {
+  font: var(--text-body-sm);
+  color: var(--fg-inverse-secondary);
+  margin-bottom: var(--space-2);
+}

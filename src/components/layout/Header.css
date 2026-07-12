@@ -1,0 +1,46 @@
+.header {
+  background-color: var(--navy-950);
+  color: var(--fg-inverse);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--border-inverse);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wordmark a {
+  font: var(--text-eyebrow);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--fg-inverse);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.wordmark a:hover {
+  color: var(--gold-500);
+}
+
+.nav {
+  display: flex;
+  gap: var(--space-8);
+}
+
+.nav a {
+  color: var(--navy-200);
+  font: var(--text-body-sm);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.nav a:hover {
+  color: var(--gold-400);
+}
