@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './Contact.css'
 
+const FORMSPREE_ID = 'maqrwrlj'
+
 const EQUIPMENT_OPTIONS = [
   'Power Transformers',
   'Dead Tank Circuit Breakers',
@@ -21,13 +23,53 @@ const WHY_FORLANTIS = [
   'Power transformers within 10–12 months',
 ]
 
-export default function Contact() {
-  const [submitted, setSubmitted] = useState(false)
-  const [email, setEmail] = useState('')
+const INITIAL_FORM = {
+  name: '',
+  email: '',
+  company: '',
+  equipment: '',
+  details: '',
+  services: false,
+}
 
-  const handleSubmit = (e) => {
+export default function Contact() {
+  const [form, setForm] = useState(INITIAL_FORM)
+  const [status, setStatus] = useState('idle') // idle | sending | success | error
+
+  const handleChange = (e) => {
+    const { id, value, type, checked } = e.target
+    setForm((prev) => ({ ...prev, [id]: type === 'checkbox' ? checked : value }))
+  }
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setSubmitted(true)
+    setStatus('sending')
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          'Full name': form.name,
+          'Work email': form.email,
+          'Company': form.company,
+          'Equipment type': form.equipment,
+          'Project details': form.details,
+          'Include project services': form.services ? 'Yes' : 'No',
+        }),
+      })
+      if (res.ok) {
+        setStatus('success')
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
+  }
+
+  const handleReset = () => {
+    setForm(INITIAL_FORM)
+    setStatus('idle')
   }
 
   return (
@@ -49,38 +91,31 @@ export default function Contact() {
           <div className="contact-form-card">
             <h3 className="contact-form-title">Request a Quote</h3>
 
-            {submitted ? (
+            {status === 'success' ? (
               <div className="contact-success">
                 <p className="contact-success-msg">
-                  Thank you — our solutions engineers will reply within one business day{email ? ` at ${email}` : ''}.
+                  Thank you — our solutions engineers will reply within one business day{form.email ? ` at ${form.email}` : ''}.
                 </p>
-                <button className="btn btn-primary" onClick={() => setSubmitted(false)}>Send another request</button>
+                <button className="btn btn-primary" onClick={handleReset}>Send another request</button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="contact-form" noValidate>
+              <form onSubmit={handleSubmit} className="contact-form">
                 <div className="form-row">
                   <div className="form-field">
                     <label htmlFor="name">Full name</label>
-                    <input id="name" type="text" placeholder="Jane Rodriguez" required />
+                    <input id="name" type="text" placeholder="Jane Rodriguez" value={form.name} onChange={handleChange} required />
                   </div>
                   <div className="form-field">
                     <label htmlFor="email">Work email</label>
-                    <input
-                      id="email"
-                      type="email"
-                      placeholder="you@utility.com"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                    />
+                    <input id="email" type="email" placeholder="you@utility.com" value={form.email} onChange={handleChange} required />
                   </div>
                   <div className="form-field">
                     <label htmlFor="company">Company</label>
-                    <input id="company" type="text" placeholder="EPC / utility / developer" required />
+                    <input id="company" type="text" placeholder="EPC / utility / developer" value={form.company} onChange={handleChange} required />
                   </div>
                   <div className="form-field">
                     <label htmlFor="equipment">Equipment type</label>
-                    <select id="equipment" required defaultValue="">
+                    <select id="equipment" value={form.equipment} onChange={handleChange} required>
                       <option value="" disabled>Select equipment</option>
                       {EQUIPMENT_OPTIONS.map((opt) => (
                         <option key={opt} value={opt}>{opt}</option>
@@ -89,15 +124,19 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="form-field form-field-full">
-                  <label htmlFor="details">Project details</label>
-                  <textarea
-                    id="details"
-                    rows="4"
-                    placeholder="Ratings, quantities, site location, target delivery"
-                    required
-                  />
+                  <label htmlFor="details">Project details</label>s
+                  <textarea id="details" rows="4" placeholder="Ratings, quantities, site location, target delivery" value={form.details} onChange={handleChange} required />
                 </div>
-                <button type="submit" className="btn btn-secondary contact-submit">Submit Request</button>
+                {/* <label className="checkbox-label">
+                  <input id="services" type="checkbox" checked={form.services} onChange={handleChange} />
+                  Include project services (engineering, testing, commissioning)
+                </label>
+                {status === 'error' && (
+                  <p className="contact-error">Something went wrong. Please email us directly at info@forlantisgrid.com</p>
+                )} */}
+                <button type="submit" className="btn btn-secondary contact-submit" disabled={status === 'sending'}>
+                  {status === 'sending' ? 'Sending…' : 'Submit Request'}
+                </button>
               </form>
             )}
           </div>

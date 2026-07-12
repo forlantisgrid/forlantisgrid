@@ -13,13 +13,9 @@
   margin-bottom: var(--space-8);
 }
 
-.footer-wordmark {
-  font: var(--text-eyebrow);
-  letter-spacing: var(--tracking-label);
-  text-transform: uppercase;
-  color: var(--fg-inverse);
-  margin-bottom: var(--space-3);
-  display: block;
+.footer-logo {
+  margin-bottom: var(--space-4);
+  /* SVG has transparent background — no extra styling needed */
 }
 
 .footer-section h5 {

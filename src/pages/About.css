@@ -1,0 +1,98 @@
+.about-hero {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border-default);
+  padding: var(--space-16) 0 var(--space-12);
+}
+
+.about-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-5);
+}
+
+.about-hero-title {
+  font: var(--text-h1);
+  color: var(--fg-primary);
+  margin-bottom: var(--space-3);
+}
+
+/* Who We Are */
+.about-section {
+  padding: var(--space-20) 0;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.about-body {
+  max-width: 760px;
+}
+
+.about-text p {
+  font: var(--text-body-lg);
+  color: var(--fg-secondary);
+  margin-bottom: var(--space-5);
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+.about-section-title {
+  font: var(--text-h2);
+  color: var(--fg-primary);
+  margin: var(--space-3) 0 var(--space-6);
+}
+
+/* Pillars */
+.about-pillars-section {
+  padding: var(--space-20) 0;
+  background-color: var(--bg-page);
+}
+
+.about-pillars-section .about-section-title {
+  margin-bottom: var(--space-10);
+}
+
+.about-pillars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+}
+
+.about-pillar {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  box-shadow: var(--shadow-xs);
+}
+
+.pillar-icon {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  align-self: flex-start;
+}
+
+.pillar-title {
+  font: var(--text-h4);
+  color: var(--fg-primary);
+  margin: 0;
+}
+
+.pillar-desc {
+  font: var(--text-body-sm);
+  color: var(--fg-secondary);
+  margin: 0;
+}
+
+.about-hero-sub {
+  font: var(--text-body-lg);
+  color: var(--fg-secondary);
+  margin: 0;
+  max-width: 480px;
+}

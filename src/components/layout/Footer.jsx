@@ -1,3 +1,4 @@
+import Logo from '../ui/Logo'
 import './Footer.css'
 
 export default function Footer() {
@@ -5,7 +6,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-content">
         <div className="footer-section">
-          <span className="footer-wordmark">F O R L A N T I S&nbsp;&nbsp;P O W E R&nbsp;&nbsp;S O L U T I O N S</span>
+          <Logo height={72} variant="light" className="footer-logo" />
           <p>Critical infrastructure for utilities, data centers, renewables, and industry.</p>
         </div>
         <div className="footer-section">

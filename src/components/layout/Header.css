@@ -14,17 +14,36 @@
   align-items: center;
 }
 
-.wordmark a {
-  font: var(--text-eyebrow);
-  letter-spacing: var(--tracking-label);
-  text-transform: uppercase;
-  color: var(--fg-inverse);
-  font-size: 0.9rem;
-  font-weight: 700;
+.wordmark-link {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  text-decoration: none;
 }
 
-.wordmark a:hover {
+.wordmark-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-inverse);
+  line-height: 1;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.wordmark-sub {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
   color: var(--gold-500);
+  line-height: 1;
+}
+
+.wordmark-link:hover .wordmark-name {
+  color: var(--gold-400);
 }
 
 .nav {

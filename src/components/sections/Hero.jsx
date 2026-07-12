@@ -10,11 +10,10 @@ export default function Hero() {
       <div className="container hero-content">
         <span className="section-eyebrow">Forlantis Power Solutions</span>
         <h1 className="hero-title">
-          Critical Power<br />Infrastructure Solutions
+          Substation Equipment<br />Solutions
         </h1>
         <p className="hero-sub">
-          Utility-grade substation equipment backed by XD Group manufacturing excellence since 1959.
-          Serving utilities, EPC contractors, data centers, renewables, and industrial facilities.
+          Utility-grade Power Equipment. Proven Performance. Trusted Solutions.
         </p>
         <div className="hero-actions">
           <a href="/products" className="btn btn-secondary">Explore Products</a>

@@ -1,16 +1,56 @@
-import { products } from '../data/products'
-import ProductGrid from '../components/sections/ProductGrid'
+import { Link } from 'react-router-dom'
+import { PRODUCTS } from '../data/products'
+import './Products.css'
+
+const TAGS = ['Up to 1,100 kV', '50/60 Hz', 'UL Certified', 'ISO 9001']
 
 export default function Products() {
   return (
     <div>
-      <section style={{ padding: '3rem 0', background: 'var(--navy-50)' }}>
+      {/* Hero */}
+      <section className="products-hero">
         <div className="container">
-          <h1>Power Equipment & Solutions</h1>
-          <p>Utility-grade products for critical infrastructure.</p>
+          <span className="section-eyebrow">Substation Equipment</span>
+          <h1 className="products-hero-title">Product Range</h1>
+          <p className="products-hero-lede">
+            Nine equipment families, IEEE / ANSI / IEC / CSA / DOE compliant,
+            backed by XD Group manufacturing.
+          </p>
         </div>
       </section>
-      <ProductGrid products={products} />
+
+      {/* Listing */}
+      <section className="products-listing">
+        <div className="container">
+          <div className="products-tags">
+            {TAGS.map((tag) => (
+              <span key={tag} className="product-tag">{tag}</span>
+            ))}
+          </div>
+          <div className="products-grid">
+            {PRODUCTS.map((product) => (
+              <div key={product.slug} className="product-card">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="product-card-img"
+                />
+                <div className="product-card-body">
+                  <span className="product-card-badge">{product.badge}</span>
+                  <h3 className="product-card-title">{product.name}</h3>
+                  <p className="product-card-desc">{product.description}</p>
+                  <div className="product-card-footer">
+                    <span className="product-card-lead">{product.lead}</span>
+                    <Link to={`/products/${product.slug}`} className="product-card-link">
+                      View Specs →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

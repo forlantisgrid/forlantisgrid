@@ -6,12 +6,14 @@ export default function Header() {
     <header className="header">
       <div className="container header-content">
         <div className="wordmark">
-          <Link to="/">F O R L A N T I S</Link>
+          <Link to="/" className="wordmark-link">
+            <span className="wordmark-name">FORLANTIS</span>
+            <span className="wordmark-sub">POWER SOLUTIONS</span>
+          </Link>
         </div>
         <nav className="nav">
           <Link to="/">Home</Link>
           <Link to="/products">Products</Link>
-          <Link to="/solutions">Solutions</Link>
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
         </nav>
