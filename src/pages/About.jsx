@@ -1,8 +1,8 @@
 import './About.css'
-import iconFactory from '../assets/icons/icon-factory.png'
-import iconGlobe from '../assets/icons/icon-globe.png'
-import iconShield from '../assets/icons/icon-shield.png'
-import iconGear from '../assets/icons/icon-gear.png'
+import iconFactory from '/icon-factory.png'
+import iconGlobe from '/icon-globe.png'
+import iconShield from '/icon-shield.png'
+import iconGear from '/icon-gear.png'
 
 const PILLARS = [
   {
