@@ -1,0 +1,41 @@
+<svg viewBox="0 0 460 385" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Forlantis Power Solutions">
+
+  <!-- F lettermark — bold, slight italic lean -->
+  <g transform="translate(115, 12) skewX(-8)">
+    <path d="M 0,0 H 90 V 35 H 42 V 82 H 78 V 112 H 42 V 185 H 0 Z" fill="#0a1728"/>
+  </g>
+
+  <!-- P lettermark — bold, evenodd bowl counter -->
+  <path
+    transform="translate(218, 12)"
+    d="M 0,0 H 40 V 185 H 0 Z M 40,0 C 128,0 128,165 40,165 Z M 40,32 C 98,32 98,133 40,133 Z"
+    fill-rule="evenodd"
+    fill="#0a1728"
+  />
+
+  <!-- Lightning bolt -->
+  <path d="M 198,48 L 234,48 L 212,118 L 248,118 L 178,224 L 200,148 L 166,148 Z" fill="#d9a441"/>
+
+  <!-- FORLANTIS -->
+  <text
+    x="230" y="264"
+    text-anchor="middle"
+    font-family="'Archivo Expanded', 'Archivo', Arial, sans-serif"
+    font-weight="800"
+    font-size="46"
+    letter-spacing="6"
+    fill="#0a1728"
+  >FORLANTIS</text>
+
+  <!-- — POWER SOLUTIONS — -->
+  <text
+    x="230" y="298"
+    text-anchor="middle"
+    font-family="'Archivo', Arial, sans-serif"
+    font-weight="600"
+    font-size="14"
+    letter-spacing="5"
+    fill="#d9a441"
+  >— POWER SOLUTIONS —</text>
+
+</svg>
