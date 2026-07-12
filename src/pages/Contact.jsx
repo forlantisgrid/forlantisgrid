@@ -126,13 +126,6 @@ export default function Contact() {
                   <label htmlFor="details">Project details</label>
                   <textarea id="details" rows="4" placeholder="Ratings, quantities, site location, target delivery" value={form.details} onChange={handleChange} required />
                 </div>
-                {/* <label className="checkbox-label">
-                  <input id="services" type="checkbox" checked={form.services} onChange={handleChange} />
-                  Include project services (engineering, testing, commissioning)
-                </label>
-                {status === 'error' && (
-                  <p className="contact-error">Something went wrong. Please email us directly at info@forlantisgrid.com</p>
-                )} */}
                 <button type="submit" className="btn btn-secondary contact-submit" disabled={status === 'sending'}>
                   {status === 'sending' ? 'Sending…' : 'Submit Request'}
                 </button>
