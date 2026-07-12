@@ -245,7 +245,7 @@ export const PRODUCTS = [
     badge: '300 MVAR',
     lead: '<0.5s response',
     description: 'Short-circuit power, rotational inertia, and fast reactive power compensation for renewable-heavy grids.',
-    image: '/substation-dusk-wide.png',
+    image: 'public/images/substation-dusk-wide.png',
     eyebrow: 'Synchronous Condensers',
     title: 'Up to 300 MVAR — <0.5s Voltage Response',
     lede: 'Grid-forming synchronous condensers providing short-circuit power, rotational inertia, and fast reactive power compensation for modern renewable-heavy networks.',
