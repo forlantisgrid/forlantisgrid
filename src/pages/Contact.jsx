@@ -97,10 +97,6 @@ export default function Contact() {
                     required
                   />
                 </div>
-                <label className="checkbox-label">
-                  <input type="checkbox" />
-                  Include project services (engineering, testing, commissioning)
-                </label>
                 <button type="submit" className="btn btn-secondary contact-submit">Submit Request</button>
               </form>
             )}
