@@ -176,3 +176,26 @@
 .detail-back:hover {
   color: var(--fg-primary);
 }
+
+@media (max-width: 768px) {
+  .detail-hero-title {
+    font-size: 1.75rem;
+  }
+
+  .detail-hero-lede {
+    font-size: 1rem;
+  }
+
+  .detail-stats {
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-sidebar {
+    order: -1;
+  }
+}

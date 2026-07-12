@@ -32,3 +32,10 @@
   color: var(--fg-inverse-secondary);
   margin-bottom: var(--space-2);
 }
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}

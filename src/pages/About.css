@@ -90,6 +90,22 @@
   margin: 0;
 }
 
+@media (max-width: 1024px) {
+  .about-pillars {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .about-pillars {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero-title {
+    font-size: 1.75rem;
+  }
+}
+
 .about-hero-sub {
   font: var(--text-body-lg);
   color: var(--fg-secondary);

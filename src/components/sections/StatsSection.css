@@ -15,3 +15,19 @@
 .stats-section .stat-block-label {
   color: var(--navy-300);
 }
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  .stat-block {
+    padding: var(--space-4);
+    border-bottom: 1px solid var(--border-inverse);
+  }
+
+  .stat-block:last-child {
+    border-bottom: none;
+  }
+}

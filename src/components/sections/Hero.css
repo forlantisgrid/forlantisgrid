@@ -45,3 +45,27 @@
   gap: var(--space-4);
   flex-wrap: wrap;
 }
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 480px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.75rem, 6vw, 3rem);
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}

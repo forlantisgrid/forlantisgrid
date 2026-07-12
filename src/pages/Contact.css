@@ -212,3 +212,22 @@
   font: var(--text-body-sm);
   color: var(--navy-200);
 }
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-hero-title {
+    font-size: 1.75rem;
+  }
+
+  .contact-submit {
+    width: 100%;
+    justify-content: center;
+  }
+}

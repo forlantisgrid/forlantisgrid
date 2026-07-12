@@ -31,3 +31,22 @@
   margin-bottom: var(--space-8);
   max-width: 480px;
 }
+
+@media (max-width: 768px) {
+  .cta-section {
+    padding: var(--space-16) 0;
+  }
+
+  .cta-title {
+    font-size: 1.75rem;
+  }
+
+  .cta-sub {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
