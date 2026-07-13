@@ -1,5 +1,5 @@
 export const stats = [
-  { value: '120K+', label: 'Units in service since 1989' },
+  { value: '120K+', label: 'Units in service' },
   { value: '97.9%', label: 'Component Efficiency' },
   { value: '<0.5s', label: 'Voltage Response Time' },
 ]

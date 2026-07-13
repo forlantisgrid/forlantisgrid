@@ -43,7 +43,7 @@ export const PRODUCTS = [
     title: '40.5 kV – 1,100 kV',
     lede: 'Advanced self-blast arc extinguishing technology, modular spring mechanisms, and integrated hydromechanical operation.',
     stats: [
-      { value: '120K+', label: 'Self-blast interrupters in service since 1989' },
+      { value: '120K+', label: 'Self-blast interrupters in service' },
       { value: '30K+', label: 'DTCBs deployed globally' },
     ],
     specs: [
