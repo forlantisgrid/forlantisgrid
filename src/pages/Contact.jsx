@@ -86,14 +86,14 @@ export default function Contact() {
       <section className="contact-body">
         <div className="container contact-grid">
 
-          {/* Left — Quote form */}
+          {/* Left: Quote form */}
           <div className="contact-form-card">
             <h3 className="contact-form-title">Request a Quote</h3>
 
             {status === 'success' ? (
               <div className="contact-success">
                 <p className="contact-success-msg">
-                  Thank you — our solutions engineers will reply within one business day{form.email ? ` at ${form.email}` : ''}.
+                  Thank you. Our solutions engineers will reply within one business day{form.email ? ` at ${form.email}` : ''}.
                 </p>
                 <button className="btn btn-primary" onClick={handleReset}>Send another request</button>
               </div>
@@ -133,7 +133,7 @@ export default function Contact() {
             )}
           </div>
 
-          {/* Right — Info sidebar */}
+          {/* Right: Info sidebar */}
           <div className="contact-sidebar">
             <div className="contact-info-row">
               <span className="contact-info-label">Email Us</span>

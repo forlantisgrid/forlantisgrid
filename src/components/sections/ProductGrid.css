@@ -3,13 +3,32 @@
   background-color: var(--bg-page);
 }
 
+.product-grid-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-4);
+}
+
+.product-grid-view-all {
+  font: var(--text-body-sm);
+  font-weight: 600;
+  color: var(--navy-700);
+  white-space: nowrap;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.product-grid-view-all:hover {
+  color: var(--gold-600);
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-6);
 }
 
-/* Card — image bleeds to all edges via overflow:hidden */
+/* Card: image bleeds to all edges via overflow:hidden */
 .pg-card {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-default);
@@ -82,5 +101,11 @@
 @media (max-width: 640px) {
   .product-grid {
     grid-template-columns: 1fr;
+  }
+
+  .product-grid-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
   }
 }

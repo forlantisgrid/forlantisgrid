@@ -13,7 +13,7 @@ export default function Products() {
           <span className="section-eyebrow">Substation Equipment</span>
           <h1 className="products-hero-title">Product Range</h1>
           <p className="products-hero-lede">
-            Nine equipment families, IEEE / ANSI / IEC / CSA / DOE compliant
+            Utility-Grade Power Equipment. Proven Performance. Trusted Solutions.
           </p>
         </div>
       </section>

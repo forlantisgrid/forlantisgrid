@@ -1,6 +1,6 @@
 /**
- * variant="dark"  — navy mark + gold accent, for white/light backgrounds (About page)
- * variant="light" — white mark + gold accent, for dark backgrounds (Footer)
+ * variant="dark":  navy mark + gold accent, for white/light backgrounds (About page)
+ * variant="light": white mark + gold accent, for dark backgrounds (Footer)
  */
 export default function Logo({ height = 120, className = '', variant = 'dark' }) {
   const mark = variant === 'light' ? '#ffffff' : '#0a1728'
@@ -15,7 +15,7 @@ export default function Logo({ height = 120, className = '', variant = 'dark' })
       className={className}
       style={{ display: 'block', width: 'auto' }}
     >
-      {/* F lettermark — bold, slight italic lean via skewX */}
+      {/* F lettermark: bold, slight italic lean via skewX */}
       <g transform="translate(115, 12) skewX(-8)">
         <path
           d="M 0,0 H 90 V 35 H 42 V 82 H 78 V 112 H 42 V 185 H 0 Z"
@@ -23,7 +23,7 @@ export default function Logo({ height = 120, className = '', variant = 'dark' })
         />
       </g>
 
-      {/* P lettermark — bold, with evenodd bowl counter */}
+      {/* P lettermark: bold, with evenodd bowl counter */}
       <path
         transform="translate(218, 12)"
         d="M 0,0 H 40 V 185 H 0 Z M 40,0 C 128,0 128,165 40,165 Z M 40,32 C 98,32 98,133 40,133 Z"
@@ -31,7 +31,7 @@ export default function Logo({ height = 120, className = '', variant = 'dark' })
         fill={mark}
       />
 
-      {/* Lightning bolt — clean polygon, intentionally crisp */}
+      {/* Lightning bolt: clean polygon, intentionally crisp */}
       <path
         d="M 198,48 L 234,48 L 212,118 L 248,118 L 178,224 L 200,148 L 166,148 Z"
         fill={gold}
