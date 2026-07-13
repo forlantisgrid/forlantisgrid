@@ -5,7 +5,7 @@ export default function CTA() {
   return (
     <section
       className="cta-section"
-      style={{ backgroundImage: 'url(/blueprint-navy-overlay.png)' }}
+      style={{ backgroundImage: `url(${import.meta.env.BASE_URL}blueprint-navy-overlay.png)` }}
     >
       <div className="cta-overlay" />
       <div className="container cta-content">

@@ -14,7 +14,7 @@ export default function Header() {
         <div className="wordmark">
           <Link to="/" className="wordmark-link" onClick={close}>
             <img
-              src="/forlantis-icon-light.svg"
+              src={import.meta.env.BASE_URL + 'forlantis-icon-light.svg'}
               alt=""
               className="header-icon"
             />

@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container footer-content">
         <div className="footer-section">
           <img
-            src="../logo-light.png"
+            src={import.meta.env.BASE_URL + 'logo-light.png'}
             alt="Forlantis Power Solutions"
             className="footer-logo"
           />
