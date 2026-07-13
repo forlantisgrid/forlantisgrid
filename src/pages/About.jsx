@@ -7,7 +7,7 @@ import iconGear from '../assets/icon-gear.png'
 const PILLARS = [
   {
     title: 'Power Equipment',
-    desc: 'Transformers, breakers, and substation equipment to IEEE, ANSI, and IEC standards — sourced from one of the world\'s most experienced high-voltage manufacturers.',
+    desc: 'Transformers, breakers, and substation equipment to IEEE, ANSI, and IEC standards, sourced from one of the world\'s most experienced high-voltage manufacturers.',
     icon: iconFactory,
   },
   {
@@ -17,7 +17,7 @@ const PILLARS = [
   },
   {
     title: 'Risk-Aware Delivery',
-    desc: 'Reducing technical, manufacturing, schedule, and quality risks at every stage — from specification through commissioning and beyond.',
+    desc: 'Reducing technical, manufacturing, schedule, and quality risks at every stage, from specification through commissioning and beyond.',
     icon: iconShield,
   },
   {
@@ -51,7 +51,7 @@ export default function About() {
             <p>
               Our role is to bridge qualified global manufacturers with execution-focused local support:
               reducing technical, manufacturing, schedule, and quality risks from first specification
-              through final commissioning. We don\'t just supply equipment — we manage the full delivery.
+              through final commissioning. We don\'t just supply equipment; we manage the full delivery.
             </p>
             <p>
               Our portfolio spans nine equipment families: power transformers, dead tank circuit breakers,

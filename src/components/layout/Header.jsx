@@ -33,7 +33,7 @@ export default function Header() {
           <Link to="/contact">Contact</Link>
         </nav>
 
-        {/* Hamburger button — mobile only */}
+        {/* Hamburger button, mobile only */}
         <button
           className="nav-toggle"
           aria-label={open ? 'Close menu' : 'Open menu'}
