@@ -1,4 +1,4 @@
-import Button from '../ui/Button'
+import { Link } from 'react-router-dom'
 import './CTA.css'
 
 export default function CTA() {
@@ -12,7 +12,7 @@ export default function CTA() {
         <span className="section-eyebrow">Get Started</span>
         <h2 className="cta-title">Ready to Power Your Next Project?</h2>
         <p className="cta-sub">Talk to our solutions engineers about your critical infrastructure needs.</p>
-        <a href="/contact" className="btn btn-secondary">Get in Touch</a>
+        <Link to="/contact" className="btn btn-secondary">Get in Touch</Link>
       </div>
     </section>
   )

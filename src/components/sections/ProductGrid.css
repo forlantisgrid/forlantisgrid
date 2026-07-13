@@ -22,6 +22,18 @@
   color: var(--gold-600);
 }
 
+@media (max-width: 768px) {
+  .product-grid-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  .product-grid-view-all {
+    white-space: normal;
+  }
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
