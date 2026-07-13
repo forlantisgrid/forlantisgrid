@@ -1,5 +1,6 @@
+import { Link } from 'react-router-dom'
 import './Hero.css'
-
+import { Link } from 'react-router-dom'
 export default function Hero() {
   return (
     <section
@@ -16,8 +17,8 @@ export default function Hero() {
           Utility-grade Power Equipment. Proven Performance. Trusted Solutions.
         </p>
         <div className="hero-actions">
-          <a href="/products" className="btn btn-secondary">Explore Products</a>
-          <a href="/contact" className="btn btn-outline">Talk to an Engineer</a>
+          <Link to="/products" className="btn btn-secondary">Explore Products</Link>
+          <Link to="/contact" className="btn btn-outline">Talk to an Engineer</Link>
         </div>
       </div>
     </section>
